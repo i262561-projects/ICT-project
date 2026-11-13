@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NUCESphere – discover university events, news, societies and resources in one place.">
+  <link rel="icon" type="image/png" href="IMAGES/logo/nucesphere.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+  <title>NUCESphere | Home</title>
+
+  <!-- Apply saved theme before the page paints (prevents white flash) -->
+  <script>
+    try {
+      var t = localStorage.getItem('campus-pulse-theme');
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  </script>
+
+</head>
+
+<body>
+
+   <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-navbar">
+    <div class="container">
+
+      <!-- Logo + name -->
+      <a class="navbar-brand" href="index.html">
+        <img src="IMAGES/logo/nucesphere.png" alt="NUCESphere logo">
+        <span>NUCESphere</span>
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNav" aria-controls="mainNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links + theme toggle -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">Department News</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Upcoming Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="clubs.html">Clubs &amp; Societies</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resource Center</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <button class="theme-toggle" type="button" aria-label="Toggle theme"></button>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="main-content">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10">
+
+            <span class="hero-badge anim-fade-up">Your Campus. Your Events.</span>
+
+            <h1 class="hero-title anim-fade-up delay-1">
+              Welcome to <span class="text-accent">NUCESphere</span>
+            </h1>
+
+            <p class="hero-text anim-fade-up delay-2">
+              Discover upcoming events, read the latest department news, explore student
+              societies and submit your own event ideas, all in one place.
+            </p>
+
+            <div class="hero-buttons anim-fade-up delay-3">
+              <a href="events.html" class="btn-cp btn-cp-accent me-2">Explore Events &rarr;</a>
+              <a href="clubs.html" class="btn-cp btn-cp-outline-light">View Societies</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED EVENT ================= -->
+    <section id="featured-event">
+      <div class="container">
+        <h2 class="section-title reveal">Next Big Event</h2>
+        <p class="text-muted-cp reveal">Don't miss the biggest event on campus this semester.</p>
+
+        <div class="featured-card reveal mt-4">
+          <div class="row g-0 align-items-stretch">
+
+            <div class="col-lg-6">
+              <div class="featured-img">
+                <img src="IMAGES/events/featured-event.jpg" alt="Career Fair 2026 banner">
+                <span class="featured-tag">Featured Event</span>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="featured-body">
+                <span class="badge-cat cat-career">Career</span>
+                <h3 class="mb-3">Career Fair 2026</h3>
+
+                <ul class="event-meta">
+                  <li>📅 <strong>Date:</strong> 10 December 2026</li>
+                  <li>🕙 <strong>Time:</strong> 10:00 AM – 4:00 PM</li>
+                  <li>📍 <strong>Venue:</strong> Main Auditorium</li>
+                </ul>
+
+                <p>Meet leading companies, attend CV clinics and get career guidance from industry
+                   professionals. Open to all departments and all semesters.</p>
+
+                <!-- Countdown (logic is added in Step 11 → countdown.js) -->
+                <div class="countdown" id="countdown" data-event-date="2026-12-10T10:00:00">
+                  <div class="countdown-box"><span id="cd-days">00</span><small>Days</small></div>
+                  <div class="countdown-box"><span id="cd-hours">00</span><small>Hours</small></div>
+                  <div class="countdown-box"><span id="cd-minutes">00</span><small>Minutes</small></div>
+                  <div class="countdown-box"><span id="cd-seconds">00</span><small>Seconds</small></div>
+                </div>
+
+                <a href="events.html" class="btn-cp btn-cp-primary mt-3">View Event Details</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= POPULAR EVENTS ================= -->
+    <section id="popular-events" class="bg-sky-soft">
+      <div class="container">
+        <h2 class="section-title reveal">Popular Events</h2>
+        <p class="text-muted-cp reveal">The events students are talking about right now.</p>
+
+        <div class="row g-4 mt-2">
+
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <div class="card-cp academic">
+              <div class="card-img-wrap">
+                <img src="IMAGES/events/event-ai-workshop.jpg" alt="AI and Data Science workshop">
+              </div>
+              <div class="card-body-cp">
+                <span class="badge-cat cat-academic">Academic</span>
+                <h3 class="card-title-cp">AI &amp; Data Science Workshop</h3>
+                <p class="small-label mb-2">📅 20 November 2026</p>
+                <p class="text-muted-cp">A hands-on workshop on machine learning basics with live demos and Q&amp;A.</p>
+                <a href="events.html" class="btn-cp btn-cp-secondary btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <div class="card-cp cultural">
+              <div class="card-img-wrap">
+                <img src="IMAGES/events/event-cultural-night.jpg" alt="Cultural Night performance">
+              </div>
+              <div class="card-body-cp">
+                <span class="badge-cat cat-cultural">Cultural</span>
+                <h3 class="card-title-cp">Cultural Night</h3>
+                <p class="small-label mb-2">📅 28 November 2026</p>
+                <p class="text-muted-cp">An evening of music, dance, drama and food stalls from every region.</p>
+                <a href="events.html" class="btn-cp btn-cp-secondary btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <div class="card-cp sports">
+              <div class="card-img-wrap">
+                <img src="IMAGES/events/event-sports-gala.jpg" alt="Annual Sports Gala">
+              </div>
+              <div class="card-body-cp">
+                <span class="badge-cat cat-sports">Sports</span>
+                <h3 class="card-title-cp">Annual Sports Gala</h3>
+                <p class="small-label mb-2">📅 5 December 2026</p>
+                <p class="text-muted-cp">Cricket, football, badminton and more. Register your team and compete for the trophy.</p>
+                <a href="events.html" class="btn-cp btn-cp-secondary btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5 reveal">
+          <a href="events.html" class="btn-cp btn-cp-primary">See All Events</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RECENT ANNOUNCEMENTS ================= -->
+    <section id="announcements">
+      <div class="container">
+        <h2 class="section-title reveal">Recent Announcements</h2>
+        <p class="text-muted-cp reveal">Stay up to date with the latest from the event department.</p>
+
+        <div class="row g-4 mt-2">
+
+          <!-- Announcement 1 -->
+          <div class="col-12 reveal">
+            <div class="announcement">
+              <div class="announcement-date">
+                <span>10</span><small>Nov 2026</small>
+              </div>
+              <div class="announcement-body">
+                <span class="badge-cat cat-sports">Sports</span>
+                <h3 class="announcement-title">Annual Sports Gala Registration Open</h3>
+                <p class="text-muted-cp mb-2">Teams can now register for cricket, football, badminton and table tennis. Registration closes on 25 November.</p>
+                <a href="news.html" class="announcement-link">Read more &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Announcement 2 -->
+          <div class="col-12 reveal">
+            <div class="announcement">
+              <div class="announcement-date">
+                <span>08</span><small>Nov 2026</small>
+              </div>
+              <div class="announcement-body">
+                <span class="badge-cat cat-academic">Academic</span>
+                <h3 class="announcement-title">AI Workshop Announcement</h3>
+                <p class="text-muted-cp mb-2">A one-day workshop on machine learning basics will be held on 20 November. Limited seats, so register early.</p>
+                <a href="news.html" class="announcement-link">Read more &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Announcement 3 -->
+          <div class="col-12 reveal">
+            <div class="announcement">
+              <div class="announcement-date">
+                <span>05</span><small>Nov 2026</small>
+              </div>
+              <div class="announcement-body">
+                <span class="badge-cat cat-cultural">Cultural</span>
+                <h3 class="announcement-title">Cultural Night Coming Soon</h3>
+                <p class="text-muted-cp mb-2">Performances, food stalls and live music are being planned for 28 November. Societies can apply to perform.</p>
+                <a href="news.html" class="announcement-link">Read more &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5 reveal">
+          <a href="news.html" class="btn-cp btn-cp-primary">View All News</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+
+        <!-- Logo + intro -->
+        <div class="col-lg-4 col-md-12">
+          <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-3" href="index.html"
+             style="color:#fff; font-family:var(--font-heading); font-weight:700; font-size:1.3rem;">
+            <img src="IMAGES/logo/nucesphere.png" alt="NUCESphere logo" style="height:40px;">
+            NUCESphere
+          </a>
+          <p>Your gateway to university events, student societies and campus activities. Discover, participate and stay connected.</p>
+          <div class="social-icons mt-3 d-flex flex-wrap">
+            <a href="#" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="mailto:events@campuspulse.edu.pk" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-lg-4 col-md-6">
+          <h5>Quick Links</h5>
+          <div class="row">
+            <ul class="footer-links col-6">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="news.html">Department News</a></li>
+              <li><a href="events.html">Upcoming Events</a></li>
+            </ul>
+            <ul class="footer-links col-6">
+              <li><a href="clubs.html">Clubs &amp; Societies</a></li>
+              <li><a href="resources.html">Resource Center</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact info -->
+        <div class="col-lg-4 col-md-6">
+          <h5>Contact</h5>
+          <ul class="footer-links">
+            <li>📍 Event Department, University Campus</li>
+            <li>📞 +92 300 0000000</li>
+            <li>✉️ <a href="mailto:events@campuspulse.edu.pk">events@campuspulse.edu.pk</a></li>
+            <li>🕘 Mon – Fri, 9:00 AM – 5:00 PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        &copy; 2026 NUCESphere. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Our JS -->
+  <script src="JS/main.js"></script>
+  <script src="JS/countdown.js"></script>
+</body>
+</html>

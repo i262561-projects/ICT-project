@@ -1,0 +1,133 @@
+/* ==========================================================
+   Campus Pulse – responsive.css (shared by all pages)
+   Breakpoints follow Bootstrap 5:
+   Large  ≤ 991.98px (tablet landscape)
+   Medium ≤ 767.98px (tablet portrait)
+   Small  ≤ 575.98px (mobile)
+   ========================================================== */
+
+/* ---------- Global safety: nothing leaves the screen ---------- */
+html, body { overflow-x: hidden; }
+img, video, iframe, table { max-width: 100%; }
+.card-cp .card-img-wrap img { width: 100%; }
+
+/* ---------- LARGE: tablets and below (≤ 991.98px) ---------- */
+@media (max-width: 991.98px) {
+
+  section { padding: 55px 0; }
+
+  /* Collapsed navbar menu */
+  .site-navbar .navbar-collapse {
+    background-color: var(--nav-bg);
+    margin-top: 10px;
+    padding: 12px 16px 16px;
+    border-radius: 12px;
+    max-height: calc(100vh - var(--nav-height) - 20px);
+    overflow-y: auto;
+  }
+  .site-navbar .nav-link {
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .site-navbar .nav-link::after { display: none; }   /* no underline in mobile menu */
+  .site-navbar .nav-link.active {
+    color: var(--accent);
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+  }
+  .site-navbar .theme-toggle { margin: 14px 0 4px; }
+
+  /* Typography */
+  .hero-title    { font-size: 2.4rem; }
+  .page-title    { font-size: 2rem; }
+  .section-title { font-size: 1.6rem; }
+}
+
+/* ---------- MEDIUM: tablet portrait (≤ 767.98px) ---------- */
+@media (max-width: 767.98px) {
+
+  .page-header { padding: 50px 0 40px; }
+  .carousel-cp .carousel-item img { height: 340px; }
+  .carousel-caption-cp { padding: 40px 20px 44px; }
+  .carousel-caption-cp h3 { font-size: 1.25rem; }
+
+  section { padding: 45px 0; }
+
+  .hero-title    { font-size: 2rem; }       /* ~32px */
+  .page-title    { font-size: 1.8rem; }
+  .section-title { font-size: 1.45rem; }
+
+  /* Event cards: one column on mobile */
+  .row > [class*="col-md-"].event-col,
+  .event-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .card-cp:hover { transform: translateY(-4px); }   /* softer lift on touch screens */
+
+  /* Footer arranged and centred */
+  .site-footer { padding: 45px 0 20px; text-align: center; }
+  .site-footer .social-icons { justify-content: center; }
+  .site-footer .footer-links a:hover { padding-left: 0; }
+  .site-footer .col-md-4,
+  .site-footer [class*="col-"] { margin-bottom: 24px; }
+  .footer-bottom { margin-top: 10px; }
+}
+
+/* ---------- SMALL: mobile (≤ 575.98px) ---------- */
+@media (max-width: 575.98px) {
+
+  body { font-size: 15px; }
+
+  .hero-section { min-height: auto; padding: 60px 0; text-align: left; }
+  .hero-text { font-size: 1rem; }
+  .hero-buttons .btn-cp.me-2 { margin-right: 0 !important; }
+
+  .featured-body { padding: 22px 18px; }
+  .featured-img { min-height: 210px; }
+  .countdown { gap: 8px; }
+  .countdown-box { min-width: 0; flex: 1 1 calc(50% - 8px); }
+
+  .hero-title    { font-size: 1.85rem; }    /* ~30px */
+  .page-title    { font-size: 1.6rem; }
+  .section-title { font-size: 1.3rem; }
+  .card-title-cp { font-size: 1.1rem; }
+
+  .announcement { flex-direction: column; gap: 14px; padding: 16px; }
+  .announcement-date { flex: none; flex-direction: row; gap: 8px; width: fit-content; padding: 8px 14px; }
+  .announcement-date span { font-size: 1.3rem; }
+  .announcement:hover { transform: translateY(-4px); }
+
+  .site-navbar .navbar-brand { font-size: 1.1rem; }
+  .site-navbar .navbar-brand img { height: 36px; }
+
+  /* Buttons fit the screen */
+  .btn-cp {
+    padding: 11px 20px;
+    font-size: 0.95rem;
+  }
+  .hero-buttons .btn-cp,
+  .btn-block-mobile {
+    display: block;
+    width: 100%;
+    margin: 0 0 12px 0;
+    text-align: center;
+  }
+
+  .carousel-cp .carousel-item img { height: 260px; }
+  .carousel-caption-cp p { display: none; }
+  .news-accordion .accordion-button { flex-wrap: wrap; gap: 8px; font-size: 1rem; padding: 14px 16px; }
+
+  .card-cp .card-body-cp { padding: 16px; }
+
+  /* Footer social icons wrap neatly */
+  .site-footer .social-icons a { margin: 0 4px 8px; }
+
+  /* Tables / long words never break the layout */
+  p, h1, h2, h3, h4, h5, h6, a, li { overflow-wrap: break-word; word-wrap: break-word; }
+}
+
+/* ---------- Large screens (≥ 1400px): keep content comfortable ---------- */
+@media (min-width: 1400px) {
+  .hero-title { font-size: 3.4rem; }
+}
